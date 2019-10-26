@@ -1,21 +1,46 @@
 import pygame
-def multiply(0, 1):
-  0 * 1
-if pygame.mouse.get_pressed()[0] and not alreadyplaced and not isoutofbounds:
-    if is_horizontal:
-        self.boardh[ypos][xpos]=True
-        self.Send({"action": "place", "x":xpos, "y":ypos, "is_horizontal": is_horizontal, "gameid": self.gameid, "num": self.num})
-    else:
-        self.boardv[ypos][xpos]=True
-        self.Send({"action": "place", "x":xpos, "y":ypos, "is_horizontal": is_horizontal, "gameid": self.gameid, "num": self.num})
-if self.queue==None:
-    self.currentIndex+=1
-    channel.gameid=self.currentIndex
-    self.queue=Game(channel, self.currentIndex)
-else:
-    channel.gameid=self.currentIndex
-    self.queue.player1=channel
-    self.queue.player0.Send({"action": "startgame","player":0, "gameid": self.queue.gameid})
-    self.queue.player1.Send({"action": "startgame","player":1, "gameid": self.queue.gameid})
-    self.games.append(self.queue)
-    self.queue=None
+import sys
+import os # new code below
+
+class Player(pygame.sprite.Sprite):
+    '''
+    Spawn a player
+    '''
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.images = []
+    img = pygame.image.load(os.path.join('images','hero.png')).convert()
+    self.images.append(img)
+    self.image = self.images[0]
+    self.rect  = self.image.get_rect()
+'''
+Objects
+'''
+
+class Player(pygame.sprite.Sprite):
+    '''
+    Spawn a player
+    '''
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.images = []
+        for i in range(1,5):
+            img = pygame.image.load(os.path.join('images','hero' + str(i) + '.png')).convert()
+            self.images.append(img)
+            self.image = self.images[0]
+            self.rect  = self.image.get_rect()
+world       = pygame.display.set_mode([worldx,worldy])
+backdrop    = pygame.image.load(os.path.join('images','stage.png')).convert()
+backdropbox = screen.get_rect()
+
+# new code below
+
+player = Player()   # spawn player
+player.rect.x = 0   # go to x
+player.rect.y = 0   # go to y
+player_list = pygame.sprite.Group()
+player_list.add(player)
+world.blit(backdrop, backdropbox)
+    player_list.draw(screen) # draw player
+    pygame.display.flip()
+    clock.tick(fps)
