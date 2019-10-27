@@ -7,17 +7,19 @@ loot_table = ["rotting flesh","spider fang","linen cloth","sorcerer's robes of t
 # Encounter a mob
 mob = mobs[random.randint(0,len(mobs)-1)]
 print("Fighting " + mob)
-    if a zombie
+
+for items in mobs:
+    if item == "zombie":
         print("I am about to put you back into the ground!")
-    if a witch
+    if item == "witch"
         print("Okay big nose! Come at me!")
-    if a spider
+    if item == "spider"
         print("I hate eight legged freaks...")
-    if a skeleton
+    if item == "skeleton"
         print("Is the a walking bag of bones?")
-    if a creeper
+    if item == "creeper"
         print("OMG!! RUN! Run!")
-    if a ender dragon
+    if item == "ender dragon"
         print("why is there a dragon here....")
 
 # Kill the mob
