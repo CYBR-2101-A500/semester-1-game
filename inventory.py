@@ -11,15 +11,15 @@ print("Fighting " + mob)
 for items in mobs:
     if item == "zombie":
         print("I am about to put you back into the ground!")
-    if item == "witch"
+    if item == "witch":
         print("Okay big nose! Come at me!")
-    if item == "spider"
+    if item == "spider":
         print("I hate eight legged freaks...")
-    if item == "skeleton"
+    if item == "skeleton":
         print("Is the a walking bag of bones?")
-    if item == "creeper"
+    if item == "creeper":
         print("OMG!! RUN! Run!")
-    if item == "ender dragon"
+    if item == "ender dragon":
         print("why is there a dragon here....")
 
 # Kill the mob
