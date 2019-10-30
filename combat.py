@@ -1,11 +1,11 @@
-﻿import random
+import random
 
 def hit(health):
     hit = random.randint(0,50) # Whether hit lands
     damage = random.randint(10,50) # Damage done
 
-    if hit == 50:
-        print("Crit!")
+    if hit >= 45:
+        print("Crit!" + " " + str(damage * 2))
         return health - (damage * 2)
     elif hit <= 10:
         print("Miss")
@@ -15,7 +15,7 @@ def hit(health):
         return health - damage
 
 player_health = 500
-mob_health = 50
+mob_health = 100
 
 while player_health > 0 and mob_health > 0:
     print("Player: " + str(player_health))
