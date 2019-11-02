@@ -23,24 +23,28 @@ else:
 # Kill the mob
 print("Killed " + mob)
 
+# Random chance at 2 gold coins from enemy(30%)
+if random.randint(0,100) < 30:
+    print("I found 2 gold coins!")
+
 # Loot the mob
 if mob == "goo manifestation":
     print("Loot goo manifestation")
     print("Drop: poisonous waste")
-    print("Inventory: ", inventory + "poisonous waste")
+    print("Inventory: ", str(inventory) + "poisonous waste")
 elif mob == "bat":
     print("Loot bat")
     print("Drop: bat wing")
-    print("Inventory: ", inventory + "bat wing")
+    print("Inventory: ", str(inventory) + "bat wing")
 elif mob == "bear":
     print("Loot bear")
     print("Drops: animal skin, meat")
-    print("Inventory: ", inventory + "animal skin, meat")
+    print("Inventory: ", str(inventory) + "animal skin, meat")
 elif mob == "tiger":
     print("Loot tiger")
     print("Drops: animal skin, meat")
-    print("Inventory: ", inventory + "animal skin, meat")
+    print("Inventory: ", str(inventory) + "animal skin, meat")
 else:
     print("Loot eagle")
     print("Drop: feather")
-    print("Inventory: ", inventory + "feather")
+    print("Inventory: ", str(inventory) + "feather")
