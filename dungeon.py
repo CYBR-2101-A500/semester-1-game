@@ -1,3 +1,16 @@
+'''
+The Map.
+
+What does our player's world look like? How do we convey
+it (and navigation options) to them?
+
+TODO: This is Adam's initial map contribution and was done independently
+of the other mob and player stuff. We need to bring those other features
+into this one. We may also need to move some of the things in this module
+out into their own modules or otherwise make adaptations to better
+integrate this into the game as a whole.
+'''
+
 from random import randint, choice
 import subprocess #allows you to spawn new processes; uses Popen constructor
 import platform #queries python interpreter for architecture information
