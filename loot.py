@@ -1,4 +1,5 @@
 import random
+import utils.odds as odds
 
 gear = {
     'weapon': {
@@ -215,7 +216,7 @@ For guaranteed drops, set the relevent chance 1 when calling the function
 '''
 def get_loot(gear_chance=10, epic_chance=10000, misc_items=5):
     # Roll for an Epic, steps from epic_chance to 1
-    epic_roll = random.randrange(1, (1 + epic_chance), 1)
+    epic_roll = odds.basic(epic_chance)
     got_epic = False
     gear = []
 
@@ -225,7 +226,7 @@ def get_loot(gear_chance=10, epic_chance=10000, misc_items=5):
     # If we got an epic, we'll skip regular gear,
     # but if we didn't get an epic, let's try for a consolation prize
     else:
-        gear_roll = random.randrange(1, (1 + gear_chance), gear_chance)
+        gear_roll = odds.basic(gear_chance)
         if(gear_roll == gear_chance):
             gear = [get_gear_item()]
 
@@ -238,4 +239,4 @@ def get_loot(gear_chance=10, epic_chance=10000, misc_items=5):
 # print(get_gear_item())
 # print(get_misc(20))
 # print(get_loot())
-# print(get_loot(epic_chance=1))
+# print(get_loot(gear_chance=1))
