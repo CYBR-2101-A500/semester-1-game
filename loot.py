@@ -1,3 +1,17 @@
+'''
+Loot table data and generation of items.
+
+The purpose of this module is to store the loot table data
+and generate random magical items from it.
+
+TODO:
+If/when the loot tables expand, they should be moved
+into one or more of their own "data" modules, to keep the
+logic and data independent of one another.
+There's also room for improving item data, itself, so that
+the player can actually benefit from the items.
+'''
+
 import random
 import utils.odds as odds
 

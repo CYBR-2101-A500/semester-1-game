@@ -1,3 +1,18 @@
+'''
+Mob data and generation.
+
+This module holds the data for possible mobs. Like the player template,
+the base data is only the starting point for the mob. For regular and
+named mobs, the instance of the mob is the same as this starting point,
+but for elite mobs, this is just the starting point and we modify them
+from that starting point.
+
+TODO:
+Also like the player template, we could expand on the mob stats to
+include things like armor, crit chance, miss chance, etc. and use them
+to modify our combat.
+'''
+
 import utils.odds as odds
 import random
 
