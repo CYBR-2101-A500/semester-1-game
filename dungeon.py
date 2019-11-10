@@ -9,6 +9,12 @@ of the other mob and player stuff. We need to bring those other features
 into this one. We may also need to move some of the things in this module
 out into their own modules or otherwise make adaptations to better
 integrate this into the game as a whole.
+
+We need to get it integrated, first, but once we do that, Adam had mentioned
+that he doesn't like how it shows the whole dungeon to the player. How do we
+hide the location of enemies? How can we create a sort of "fog of war" or
+"map discovery," where only the nearby movement possibilities (or walls) are
+revealed as the player moves through the map?
 '''
 
 from random import randint, choice
