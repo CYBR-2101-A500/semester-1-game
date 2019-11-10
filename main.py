@@ -27,6 +27,9 @@ print(f"Welcome, {player['name']}")
 # Engage a mob when the player reaches one
 
 
+# Use the Loot module to determine the loot the player receives and add it to the inventory
+
+
 # Repeat until the player dies, or reaches some success goal
 
 
